@@ -5,6 +5,7 @@
 
 
 function comments(state = [], action){
+    console.log('comments action running')
     console.log(state, action);
     return state
 }
