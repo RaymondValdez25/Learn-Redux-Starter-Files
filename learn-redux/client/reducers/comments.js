@@ -20,17 +20,16 @@ function postComments(state = [], action) {
         default:
             return state
     }
-    return state
 }
 
 function comments(state = [], action){
     console.log('comments action running')
     console.log(state, action);
     if(typeof action.PostId !== 'undefined'){
-         return [{
+         return {
              ...state,
              [action.PostId]: postComments(state[action.PostId], action)
-         }]
+         }
     }
     return state
 }

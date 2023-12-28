@@ -18,7 +18,7 @@ const Comments = React.createClass({
         console.log('Submitting the form!')
         console.log(this.refs)
         const { PostId } = this.props.params
-        const author = this.refs.author
+        const author = this.refs.author.value
         const comment = this.refs.comment.value
         this.props.addComment(PostId, author, comment)
         this.refs.commentForm.reset()
